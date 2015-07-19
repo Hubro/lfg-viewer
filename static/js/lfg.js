@@ -27,8 +27,9 @@ function initComicNumberInput() {
         if (isNaN(number) || number < 1)
             return;
 
-        setComicNumber(number);
+        setComicNumber(number, false);
         $comicsContainer.empty();
+        comicsAdded = [];
         initComics();
     });
 }
@@ -152,11 +153,14 @@ function getUrlComicNumber() {
     return number;
 }
 
-function setComicNumber(number) {
+function setComicNumber(number, loadNewComics) {
+    if (loadNewComics === undefined) loadNewComics = true;
+
     currentComicNumber = number;
 
-    for (var i = number; i < number + readAhead + 1; i++)
-        addComic(i);
+    if (loadNewComics)
+        for (var i = number; i < number + readAhead + 1; i++)
+            addComic(i);
 
     window.location.hash = number;
 }
