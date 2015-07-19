@@ -1,0 +1,84 @@
+
+/*
+div { outline: 1px solid blue; }
+div > div { outline: 1px solid green; }
+div > div > div { outline: 1px solid red; }
+/* */
+
+/* ==================== */
+/* ===== ELEMENTS ===== */
+/* ==================== */
+
+body {
+    font-family: "Open sans", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* =================== */
+/* ===== CLASSES ===== */
+/* =================== */
+
+.comic {
+    margin-bottom: 25px;
+}
+
+.comic .comic-img-wrapper {
+    width: 700px;
+    min-height: 1000px;
+    border-radius: 3px;
+
+    /* Stops the image from expanding the wrapper */
+    line-height: 0px;
+
+    background-color: #AAAAAA;
+    background-image: url(../img/spinner.gif);
+    background-repeat: no-repeat;
+    background-position: center 150px;
+}
+
+.comic .comic-img-wrapper img {
+    -webkit-transition: opacity 0.5s;
+            transition: opacity 0.5s;
+}
+
+.comic .comic-img-wrapper img.hidden {
+    opacity: 0;
+}
+
+/* ================== */
+/* ===== LAYOUT ===== */
+/* ================== */
+
+#site-wrapper {
+    /* The width of a LFG comic is 700px */
+    width: 700px;
+    margin: 0px auto;
+}
+
+#header {
+    margin-top: 50px;
+    margin-bottom: 25px;
+
+    font-family: "Verdana";
+}
+
+#header #title {
+    font-size: 2.25em;
+}
+
+#header #title-sub {
+    margin-left: 10px;
+
+    font-size: 1.5em;
+    opacity: 0.6;
+}
+
+#comics-nav {
+    margin-bottom: 25px;
+}
