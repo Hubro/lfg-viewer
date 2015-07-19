@@ -8,9 +8,6 @@ __pycache__/
 # Mac OSX junk
 .DS_Store
 
-# Auto-generated CSS file
-/static/css/screen.css
-
 *.log
 
 /.python-version
